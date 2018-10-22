@@ -33,10 +33,7 @@ public class SmaTest {
 		expected.add(new BigDecimal("75.39").setScale(2, RoundingMode.HALF_UP));
 		
 		// actual
-		Sma actual = new Sma();
-		actual.setData(in);
-		actual.setPeriod(2);
-		actual.setPrecision(2);
+		Sma actual = new Sma(in, 2, 2);
 
 		assertEquals(expected, actual.getSma());
 
